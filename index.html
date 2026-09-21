@@ -1,0 +1,1407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogiXpress - Global Logistics Solutions</title>
+    <meta name="description"
+        content="End-to-end logistics and supply chain solutions that drive your business forward, anywhere in the world.">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+    <!-- Background Video -->
+    <div class="video-background">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source src="Cargo_plane_flying_and_vehicles_202608291435_gwr_video_mvp.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+    </div>
+
+    <!-- Fixed Navbar Wrapper -->
+    <div class="site-navbar-wrapper">
+        <div class="container">
+            <!-- Header / Navbar -->
+            <header class="navbar">
+                <a href="index.html" class="logo" style="text-decoration: none;">
+                    <i class="ph-fill ph-cube"></i>
+                    <div class="logo-text">
+                        <span class="brand-name">LogiXpress</span>
+                        <span class="brand-tagline">Delivering Possibilities</span>
+                    </div>
+                </a>
+
+                <nav class="nav-links">
+                    <a href="index.html" class="active">Home</a>
+                    <a href="about.html">About Us</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link d-flex align-items-center gap-1">Services <i
+                                class="ph-bold ph-caret-down fs-sm"></i></a>
+                        <div class="mega-menu">
+                            <div class="mega-menu-inner">
+                                <!-- Left Column -->
+                                <div class="mega-col-left">
+                                    <div class="d-flex align-items-center gap-2 mb-3">
+                                        <div class="bg-primary" style="width: 25px; height: 2px;"></div>
+                                        <span class="text-uppercase fw-bold text-muted small letter-spacing-1">Our
+                                            Services</span>
+                                    </div>
+                                    <h3 class="fw-900 text-dark mb-3" style="font-size: 28px; line-height: 1.2;">
+                                        Complete Logistics Solutions for a <span class="text-primary">Connected World</span>
+                                    </h3>
+                                    <p class="text-muted small mb-4">From air to sea, road to rail — we deliver reliable,
+                                        efficient and customized logistics solutions tailored to your business needs.</p>
+                                    <img src="images/mega_hero.jpg" alt="Global Logistics" class="mega-hero-img">
+                                </div>
+
+                                <!-- Middle Column (Grid) -->
+                                <div class="mega-col-middle">
+                                    <a href="air-freight.html" class="mega-service-card">
+                                        <img src="images/mega_air.jpg" alt="Air Freight">
+                                        <div class="mega-card-content">
+                                            <h4>Air Freight</h4>
+                                            <p>Fast, secure and reliable air cargo solutions.</p>
+                                        </div>
+                                        <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                                    </a>
+                                    <a href="#" class="mega-service-card">
+                                        <img src="images/mega_sea.jpg" alt="Sea Freight">
+                                        <div class="mega-card-content">
+                                            <h4>Sea Freight</h4>
+                                            <p>Cost-effective ocean freight for international shipping.</p>
+                                        </div>
+                                        <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                                    </a>
+                                    <a href="land-freight.html" class="mega-service-card">
+                                        <img src="images/mega_road.jpg" alt="Road Freight">
+                                        <div class="mega-card-content">
+                                            <h4>Road Freight</h4>
+                                            <p>Efficient transportation across domestic routes.</p>
+                                        </div>
+                                        <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                                    </a>
+                                    <a href="#" class="mega-service-card">
+                                        <img src="images/warehousing.jpg" alt="Warehousing & Distribution">
+                                        <div class="mega-card-content">
+                                            <h4>Warehousing & Distribution</h4>
+                                            <p>Secure storage and efficient distribution solutions.</p>
+                                        </div>
+                                        <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                                    </a>
+                                    <a href="#" class="mega-service-card">
+                                        <img src="images/customs_clearance.jpg" alt="Customs Clearance">
+                                        <div class="mega-card-content">
+                                            <h4>Customs Clearance</h4>
+                                            <p>Hassle-free customs and documentation processes.</p>
+                                        </div>
+                                        <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                                    </a>
+                                    <a href="#" class="mega-service-card">
+                                        <img src="images/project_cargo.jpg" alt="Project Cargo">
+                                        <div class="mega-card-content">
+                                            <h4>Project Cargo</h4>
+                                            <p>Customized logistics for specialized and complex cargo.</p>
+                                        </div>
+                                        <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                                    </a>
+                                    <a href="#" class="mega-service-card">
+                                        <img src="images/mega_door.jpg" alt="Door-to-Door Logistics">
+                                        <div class="mega-card-content">
+                                            <h4>Door-to-Door Logistics</h4>
+                                            <p>Complete logistics from pickup to final delivery.</p>
+                                        </div>
+                                        <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                                    </a>
+                                </div>
+
+                                <!-- Right Column -->
+                                <div class="mega-col-right">
+                                    <h4 class="right-col-heading"><span class="text-primary">Global
+                                            Logistics</span><br><span class="text-dark">Local Commitment</span></h4>
+                                    <ul class="mega-feature-list">
+                                        <li><i class="ph-fill ph-globe"></i> Global Reach</li>
+                                        <li><i class="ph-fill ph-clock"></i> On-Time Delivery</li>
+                                        <li><i class="ph-fill ph-shield-check"></i> Safe & Secure</li>
+                                        <li><i class="ph-fill ph-headset"></i> Dedicated Support</li>
+                                    </ul>
+                                    <div class="mega-cursive-footer">
+                                        Moving Businesses Further
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#industries">Industries</a>
+                    <a href="#solutions">Solutions</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+
+                <div class="nav-actions">
+                    <a href="#tracking" class="btn btn-outline">
+                        Track Shipment <i class="ph ph-map-pin"></i>
+                    </a>
+                    <a href="#quote" class="btn btn-primary">
+                        Get a Quote <i class="ph ph-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Hamburger Button (3 lines) -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open navigation menu" aria-expanded="false">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </header>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+    <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" aria-hidden="true">
+        <div class="mobile-drawer-header">
+            <a href="index.html" class="logo mobile-drawer-logo">
+                <i class="ph-fill ph-cube"></i>
+                <div class="logo-text">
+                    <span class="brand-name">LogiXpress</span>
+                    <span class="brand-tagline">Delivering Possibilities</span>
+                </div>
+            </a>
+            <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close menu">
+                <i class="ph-bold ph-x"></i>
+            </button>
+        </div>
+
+        <div class="mobile-drawer-body">
+            <nav class="mobile-nav-list">
+                <a href="index.html" class="mobile-nav-link active">
+                    <i class="ph-bold ph-house"></i>
+                    <span>Home</span>
+                </a>
+                <a href="about.html" class="mobile-nav-link">
+                    <i class="ph-bold ph-info"></i>
+                    <span>About Us</span>
+                </a>
+
+                <!-- Expandable Services Submenu -->
+                <div class="mobile-nav-accordion" id="mobileServicesAccordion">
+                    <button class="mobile-nav-accordion-toggle" aria-expanded="false">
+                        <span class="d-flex align-items-center gap-2">
+                            <i class="ph-bold ph-squares-four"></i>
+                            <span>Services</span>
+                        </span>
+                        <i class="ph-bold ph-caret-down accordion-arrow"></i>
+                    </button>
+                    <div class="mobile-nav-accordion-content">
+                        <a href="air-freight.html" class="mobile-sublink">
+                            <i class="ph-bold ph-airplane-tilt text-primary"></i>
+                            <div class="mobile-sublink-text">
+                                <strong>Air Freight</strong>
+                                <small>Fast & secure air cargo</small>
+                            </div>
+                        </a>
+                        <a href="land-freight.html" class="mobile-sublink">
+                            <i class="ph-bold ph-truck text-primary"></i>
+                            <div class="mobile-sublink-text">
+                                <strong>Road / Land Freight</strong>
+                                <small>Nationwide ground logistics</small>
+                            </div>
+                        </a>
+                        <a href="#services" class="mobile-sublink">
+                            <i class="ph-bold ph-boat text-primary"></i>
+                            <div class="mobile-sublink-text">
+                                <strong>Sea Freight</strong>
+                                <small>Global ocean shipping</small>
+                            </div>
+                        </a>
+                        <a href="#services" class="mobile-sublink">
+                            <i class="ph-bold ph-warehouse text-primary"></i>
+                            <div class="mobile-sublink-text">
+                                <strong>Warehousing & Distribution</strong>
+                                <small>Secure modern storage</small>
+                            </div>
+                        </a>
+                        <a href="#services" class="mobile-sublink">
+                            <i class="ph-bold ph-file-text text-primary"></i>
+                            <div class="mobile-sublink-text">
+                                <strong>Customs Clearance</strong>
+                                <small>Hassle-free documentation</small>
+                            </div>
+                        </a>
+                        <a href="#services" class="mobile-sublink">
+                            <i class="ph-bold ph-package text-primary"></i>
+                            <div class="mobile-sublink-text">
+                                <strong>Project Cargo</strong>
+                                <small>Specialized complex shipping</small>
+                            </div>
+                        </a>
+                        <a href="#services" class="mobile-sublink">
+                            <i class="ph-bold ph-map-pin text-primary"></i>
+                            <div class="mobile-sublink-text">
+                                <strong>Door-to-Door Logistics</strong>
+                                <small>Complete end-to-end delivery</small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="#industries" class="mobile-nav-link">
+                    <i class="ph-bold ph-buildings"></i>
+                    <span>Industries</span>
+                </a>
+                <a href="#solutions" class="mobile-nav-link">
+                    <i class="ph-bold ph-chart-polar"></i>
+                    <span>Solutions</span>
+                </a>
+                <a href="#contact" class="mobile-nav-link">
+                    <i class="ph-bold ph-envelope-simple"></i>
+                    <span>Contact</span>
+                </a>
+            </nav>
+
+            <div class="mobile-drawer-cta">
+                <a href="#tracking" class="btn btn-outline">
+                    <i class="ph ph-map-pin"></i> Track Shipment
+                </a>
+                <a href="#quote" class="btn btn-primary">
+                    <i class="ph ph-arrow-right"></i> Get a Quote
+                </a>
+            </div>
+
+            <div class="mobile-drawer-footer">
+                <div class="mobile-footer-contact">
+                    <div class="contact-item">
+                        <i class="ph-fill ph-phone-call text-primary"></i>
+                        <span>+1 (800) 555-0199</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="ph-fill ph-envelope text-primary"></i>
+                        <span>support@logixpress.com</span>
+                    </div>
+                </div>
+                <p class="mobile-footer-tagline">Moving Businesses Further • Worldwide</p>
+            </div>
+        </div>
+    </aside>
+
+    <div class="container hero-container" style="padding-top: 100px;">
+        <!-- Main Hero Section -->
+        <main class="hero">
+            <div class="hero-content">
+
+                <h1>
+                    Connecting Worlds.<br>
+                    Delivering <span class="highlight">Excellence.</span>
+                </h1>
+
+                <p>
+                    <span>End-to-end logistics and supply chain solutions that</span>
+                    <span>drive your business forward, anywhere in the world.</span>
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#" class="btn btn-primary btn-large">
+                        Our Services <i class="ph ph-arrow-right"></i>
+                    </a>
+                    <a href="#" class="btn-video">
+                        <span class="play-icon"><i class="ph-fill ph-play"></i></span>
+                        Watch Video
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <!-- Stats Bottom Bar -->
+        <div class="stats-container">
+            <div class="stats-panel hero-stats">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="ph ph-globe-hemisphere-west"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 class="stat-number" data-target="150" data-suffix="+">150+</h3>
+                        <p>Countries Covered</p>
+                    </div>
+                </div>
+
+                <div class="stat-divider"></div>
+
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="ph ph-truck"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 class="stat-number" data-target="25" data-suffix="K+">25K+</h3>
+                        <p>Deliveries Every Day</p>
+                    </div>
+                </div>
+
+                <div class="stat-divider"></div>
+
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="ph ph-package"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 class="stat-number" data-target="99.9" data-suffix="%">99.9%</h3>
+                        <p>On-Time Delivery</p>
+                    </div>
+                </div>
+
+                <div class="stat-divider"></div>
+
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="ph-fill ph-users"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3 class="stat-number" data-target="10" data-suffix="K+">10K+</h3>
+                        <p>Happy Customers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- New Why Choose Us Section -->
+    <section class="wcu-new-section">
+        <div class="wcu-badge" style="margin-bottom: 75px;">
+            <span class="wcu-badge-line"></span>
+            WHY CHOOSE US
+            <span class="wcu-badge-line"></span>
+        </div>
+
+        <div class="wcu-mega-panel">
+            <!-- Top Badge Icon -->
+            <div class="wcu-top-badge">
+                <i class="ph ph-package"></i>
+            </div>
+
+            <!-- Header -->
+            <div class="wcu-new-header">
+                <h2>Delivering More Than Logistics,<br> <span class="highlight">Delivering Trust.</span></h2>
+                <p>We go beyond transportation. We deliver trust, reliability,<br>and excellence with every shipment.
+                </p>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="wcu-grid">
+                <!-- Card 1 -->
+                <div class="wcu-grid-item">
+                    <div class="wcu-item-icon-wrapper">
+                        <div class="wcu-item-icon-bg"></div>
+                        <div class="wcu-item-icon"><i class="ph ph-globe-hemisphere-west"></i></div>
+                    </div>
+                    <div class="wcu-item-content">
+                        <h3>Global Connectivity</h3>
+                        <div class="wcu-item-line"></div>
+                        <p>Our growing international network helps connect businesses across countries and continents.
+                        </p>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="wcu-grid-item">
+                    <div class="wcu-item-icon-wrapper">
+                        <div class="wcu-item-icon-bg"></div>
+                        <div class="wcu-item-icon"><i class="ph ph-users"></i></div>
+                    </div>
+                    <div class="wcu-item-content">
+                        <h3>Customer-Focused Solutions</h3>
+                        <div class="wcu-item-line"></div>
+                        <p>Every customer has different logistics requirements. We provide customized solutions based on
+                            cargo type, destination, timeline, and budget.</p>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="wcu-grid-item">
+                    <div class="wcu-item-icon-wrapper">
+                        <div class="wcu-item-icon-bg"></div>
+                        <div class="wcu-item-icon"><i class="ph-fill ph-tag"></i></div>
+                    </div>
+                    <div class="wcu-item-content">
+                        <h3>Competitive Pricing</h3>
+                        <div class="wcu-item-line"></div>
+                        <p>We work to provide cost-effective and practical freight solutions without compromising
+                            service quality.</p>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="wcu-grid-item">
+                    <div class="wcu-item-icon-wrapper">
+                        <div class="wcu-item-icon-bg"></div>
+                        <div class="wcu-item-icon"><i class="ph ph-clipboard-text"></i></div>
+                    </div>
+                    <div class="wcu-item-content">
+                        <h3>Reliable Coordination</h3>
+                        <div class="wcu-item-line"></div>
+                        <p>Our team focuses on proper communication, documentation, planning, and shipment coordination.
+                        </p>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="wcu-grid-item">
+                    <div class="wcu-item-icon-wrapper">
+                        <div class="wcu-item-icon-bg"></div>
+                        <div class="wcu-item-icon"><i class="ph-fill ph-package"></i></div>
+                    </div>
+                    <div class="wcu-item-content">
+                        <h3>End-to-End Solutions</h3>
+                        <div class="wcu-item-line"></div>
+                        <p>From cargo pickup to final delivery, we coordinate the complete logistics process.</p>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="wcu-grid-item">
+                    <div class="wcu-item-icon-wrapper">
+                        <div class="wcu-item-icon-bg"></div>
+                        <div class="wcu-item-icon"><i class="ph-fill ph-eye"></i></div>
+                    </div>
+                    <div class="wcu-item-content">
+                        <h3>Transparency</h3>
+                        <div class="wcu-item-line"></div>
+                        <p>We believe in honest communication and keeping customers informed throughout the shipment
+                            journey.</p>
+                    </div>
+                </div>
+                <!-- Card 7 -->
+                <div class="wcu-grid-item commitment-card">
+                    <div class="wcu-item-icon-wrapper">
+                        <div class="wcu-item-icon-bg"></div>
+                        <div class="wcu-item-icon"><i class="ph-fill ph-star"></i></div>
+                    </div>
+                    <div class="wcu-item-content">
+                        <h3>Commitment to Excellence</h3>
+                        <div class="wcu-item-line"></div>
+                        <p>Customer satisfaction, reliability, and continuous improvement remain at the center of
+                            everything we do.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Our Services Section -->
+    <section class="services-section">
+        <div class="services-header">
+            <div class="wcu-badge" style="margin-bottom: 25px;">
+                <div class="wcu-badge-line"></div>
+                <span class="wcu-badge-text">Our Services</span>
+                <div class="wcu-badge-line"></div>
+            </div>
+            <div class="services-icon-wrapper" style="margin-bottom: 25px;">
+                <i class="ph-fill ph-truck"></i>
+                <div class="dots-left"></div>
+                <div class="dots-right"></div>
+            </div>
+            <p>Comprehensive logistics solutions designed to<br>move your business forward, faster and smarter.</p>
+        </div>
+
+        <div class="services-slider-wrapper">
+            <button class="services-nav prev" id="services-prev"><i class="ph ph-caret-left"></i></button>
+
+            <div class="services-slider-container">
+                <div class="services-grid" id="services-track">
+                    <!-- Road Freight -->
+                    <div class="service-card">
+                        <div class="service-badge">
+                            <i class="ph ph-truck"></i>
+                        </div>
+                        <div class="service-image">
+                            <img src="images/road_freight.jpg" alt="Road Freight">
+                        </div>
+                        <div class="service-content">
+                            <h3>Road Freight</h3>
+                            <p>Efficient and reliable road transport solutions ensuring safe and timely delivery across
+                                domestic
+                                and regional routes.</p>
+                            <a href="land-freight.html" class="service-arrow">
+                                <i class="ph ph-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Sea Freight -->
+                    <div class="service-card">
+                        <div class="service-badge">
+                            <i class="ph ph-boat"></i>
+                        </div>
+                        <div class="service-image">
+                            <img src="images/sea_freight.jpg" alt="Sea Freight">
+                        </div>
+                        <div class="service-content">
+                            <h3>Sea Freight</h3>
+                            <p>Cost-effective ocean freight solutions for international shipping with global reach and
+                                dependable transit.</p>
+                            <a href="#" class="service-arrow">
+                                <i class="ph ph-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Air Freight -->
+                    <div class="service-card">
+                        <div class="service-badge">
+                            <i class="ph ph-airplane-tilt"></i>
+                        </div>
+                        <div class="service-image">
+                            <img src="images/air_freight.jpg" alt="Air Freight">
+                        </div>
+                        <div class="service-content">
+                            <h3><a href="air-freight.html" style="text-decoration: none; color: inherit;">Air Freight</a></h3>
+                            <p>Fast and secure air cargo services for time-sensitive shipments delivered anywhere in the
+                                world.
+                            </p>
+                            <a href="air-freight.html" class="service-arrow" aria-label="Explore Air Freight">
+                                <i class="ph ph-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Warehousing & Distribution -->
+                    <div class="service-card">
+                        <div class="service-badge">
+                            <i class="ph ph-warehouse"></i>
+                        </div>
+                        <div class="service-image">
+                            <img src="images/warehousing.jpg" alt="Warehousing">
+                        </div>
+                        <div class="service-content">
+                            <h3>Warehousing & Distribution</h3>
+                            <p>Secure warehousing and efficient distribution solutions to manage, store, and deliver
+                                your goods
+                                seamlessly.</p>
+                            <a href="#" class="service-arrow">
+                                <i class="ph ph-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Customs Clearance & Documentation -->
+                    <div class="service-card">
+                        <div class="service-badge">
+                            <i class="ph ph-file-text"></i>
+                        </div>
+                        <div class="service-image">
+                            <img src="images/customs_clearance.jpg" alt="Customs Clearance & Documentation">
+                        </div>
+                        <div class="service-content">
+                            <h3>Customs Clearance & Documentation</h3>
+                            <p>Our experienced coordination team and professional associates assist customers with
+                                documentation and clearance processes.</p>
+                            <a href="#" class="service-arrow">
+                                <i class="ph ph-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project Cargo & Specialized Logistics -->
+                    <div class="service-card">
+                        <div class="service-badge">
+                            <i class="ph ph-crane"></i>
+                        </div>
+                        <div class="service-image">
+                            <img src="images/project_cargo.jpg" alt="Project Cargo & Specialized Logistics">
+                        </div>
+                        <div class="service-content">
+                            <h3>Project Cargo & Specialized Logistics</h3>
+                            <p>Every project shipment has unique requirements. We provide customized logistics planning
+                                for specialized and complex cargo movement.</p>
+                            <a href="#" class="service-arrow">
+                                <i class="ph ph-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Door-to-Door Logistics -->
+                    <div class="service-card">
+                        <div class="service-badge">
+                            <i class="ph ph-house"></i>
+                        </div>
+                        <div class="service-image">
+                            <img src="images/door_to_door.jpg" alt="Door-to-Door Logistics">
+                        </div>
+                        <div class="service-content">
+                            <h3>Door-to-Door Logistics</h3>
+                            <p>We provide complete end-to-end logistics solutions, managing every stage of the shipment
+                                process.</p>
+                            <a href="#" class="service-arrow">
+                                <i class="ph ph-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="services-nav next" id="services-next"><i class="ph ph-caret-right"></i></button>
+        </div>
+
+        <!-- Features Bottom Bar -->
+        <div class="services-features-bar">
+            <div class="feature-item">
+                <div class="feature-icon"><i class="ph ph-shield-check"></i></div>
+                <div class="feature-text">
+                    <h4>Safe & Secure</h4>
+                    <p>Your cargo is our responsibility.</p>
+                </div>
+            </div>
+            <div class="feature-divider"></div>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="ph ph-clock"></i></div>
+                <div class="feature-text">
+                    <h4>On-Time Delivery</h4>
+                    <p>Timely delivery, every time.</p>
+                </div>
+            </div>
+            <div class="feature-divider"></div>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="ph ph-globe"></i></div>
+                <div class="feature-text">
+                    <h4>Global Network</h4>
+                    <p>Connecting businesses worldwide.</p>
+                </div>
+            </div>
+            <div class="feature-divider"></div>
+            <div class="feature-item">
+                <div class="feature-icon"><i class="ph ph-headset"></i></div>
+                <div class="feature-text">
+                    <h4>24/7 Support</h4>
+                    <p>Always here to help you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission Section -->
+    <section class="purpose-section futuristic-vm-section">
+        <div class="purpose-header"
+            style="display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 35px;">
+            <div class="wcu-badge" style="margin-bottom: 25px;">
+                <span class="wcu-badge-line"></span>
+                VISION & MISSION
+                <span class="wcu-badge-line"></span>
+            </div>
+            <p class="purpose-subtitle"
+                style="color: #ffffff; font-weight: 800; font-size: 18px; max-width: 750px; margin: 0 auto; text-shadow: 0 2px 10px rgba(0,0,0,0.8), 0 0 4px rgba(0,0,0,0.9); line-height: 1.6; letter-spacing: 0.2px;">
+                Driven by a clear vision and a stronger mission, we move businesses forward and create a more connected
+                world.</p>
+        </div>
+
+        <div class="futuristic-vm-wrapper">
+            <!-- Left Card: OUR VISION -->
+            <div class="futuristic-vm-card vision-vm-card">
+                <div class="vm-card-header">
+                    <div class="vm-icon-badge vision-icon-glow">
+                        <i class="ph-bold ph-binoculars"></i>
+                    </div>
+                    <div class="vm-number-wrap">
+                        <span class="vm-label">OUR VISION <span class="vm-label-line"></span></span>
+                    </div>
+                </div>
+
+                <div class="vm-card-body">
+                    <h2 class="vm-heading">
+                        To become a <span class="accent-cyan">globally trusted</span> logistics and freight forwarding
+                        company
+                    </h2>
+                    <p class="vm-subdesc">
+                        by delivering innovative, reliable, transparent, and customer-focused supply chain solutions.
+                    </p>
+                    <div class="vm-divider-glow"></div>
+                    <p class="vm-maindesc">
+                        We aspire to connect businesses worldwide and become a preferred logistics partner for
+                        organizations engaged in domestic and international trade.
+                    </p>
+                </div>
+
+                <div class="vm-card-footer">
+                    <div class="vm-pill-button">
+                        <div class="vm-pill-left">
+                            <span class="vm-pill-icon"><i class="ph-bold ph-globe"></i></span>
+                            <span class="vm-pill-text">A More Connected Tomorrow</span>
+                        </div>
+                        <span class="vm-pill-arrow"><i class="ph-bold ph-arrow-right"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Center Visual: 3D Globe with Transport Assets -->
+            <div class="futuristic-vm-center">
+                <div class="center-globe-wrapper">
+                    <div class="globe-tilt-container" id="globeTiltContainer">
+                        <img src="images/vision_mission_globe_transparent.png" alt="Global Supply Chain Network"
+                            class="center-globe-img" id="globeTiltImg">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Card: OUR MISSION -->
+            <div class="futuristic-vm-card mission-vm-card">
+                <div class="vm-card-header">
+                    <div class="vm-icon-badge mission-icon-glow">
+                        <i class="ph-bold ph-target"></i>
+                    </div>
+                    <div class="vm-number-wrap">
+                        <span class="vm-label">OUR MISSION <span class="vm-label-line"></span></span>
+                    </div>
+                </div>
+
+                <div class="vm-card-body">
+                    <h2 class="vm-heading">
+                        Our mission is to <span class="accent-cyan">simplify logistics and strengthen global
+                            connectivity</span>
+                    </h2>
+                    <p class="vm-subdesc">
+                        by providing dependable and customized freight forwarding solutions.
+                    </p>
+                    <div class="vm-divider-glow"></div>
+                    <p class="vm-committed-title">We are committed to:</p>
+
+                    <ul class="vm-mission-list">
+                        <li>
+                            <div class="vm-list-icon"><i class="ph-fill ph-clock"></i></div>
+                            <span>Delivering safe and timely cargo movement.</span>
+                        </li>
+                        <li>
+                            <div class="vm-list-icon"><i class="ph-fill ph-database"></i></div>
+                            <span>Providing competitive and transparent logistics solutions.</span>
+                        </li>
+                        <li>
+                            <div class="vm-list-icon"><i class="ph-fill ph-users-three"></i></div>
+                            <span>Building strong relationships with customers and international partners.</span>
+                        </li>
+                        <li>
+                            <div class="vm-list-icon"><i class="ph-fill ph-chart-bar"></i></div>
+                            <span>Creating customized supply chain solutions for every business.</span>
+                        </li>
+                        <li>
+                            <div class="vm-list-icon"><i class="ph-fill ph-gear"></i></div>
+                            <span>Continuously improving service quality through technology and innovation.</span>
+                        </li>
+                        <li>
+                            <div class="vm-list-icon"><i class="ph-fill ph-shield-check"></i></div>
+                            <span>Maintaining the highest standards of integrity and professionalism.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expert & Containers Section -->
+    <section class="expert-containers-section">
+        <!-- Top Banner -->
+        <div class="expert-banner-wrapper">
+            <div class="expert-banner">
+                <div class="expert-profile">
+                    <img src="images/expert_profile.jpg" alt="Logistics Expert">
+                    <div class="expert-profile-dots"></div>
+                </div>
+                <div class="expert-content">
+                    <div class="expert-icon-top">
+                        <i class="ph ph-headset"></i>
+                    </div>
+                    <h2>TALK TO OUR EXPERT</h2>
+                    <p>Our logistics experts are here to understand your needs and provide the best solution for your
+                        business.</p>
+                    <a href="javascript:void(0);" class="btn expert-btn">
+                        <i class="ph-fill ph-chat-circle-dots"></i> Talk to Our Expert <i class="ph ph-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+            <!-- The connecting cables to the hooks -->
+            <div class="crane-cables-wrapper">
+                <!-- Left Cables -->
+                <div class="crane-cable-group left-cable-group">
+                    <div class="top-cables">
+                        <div class="cable"></div>
+                        <div class="cable"></div>
+                    </div>
+                    <div class="spreader-assembly">
+                        <div class="spreader-block">
+                            <div class="spreader-bolt bolt-1"></div>
+                            <div class="spreader-bolt bolt-2"></div>
+                            <div class="spreader-bolt bolt-3"></div>
+                            <div class="spreader-bolt bolt-4"></div>
+                        </div>
+                        <div class="spreader-hook"></div>
+                    </div>
+                    <div class="angled-ropes">
+                        <svg viewBox="0 0 430 60" preserveAspectRatio="none">
+                            <line x1="215" y1="0" x2="10" y2="60" stroke="#1e293b" stroke-width="4" />
+                            <line x1="215" y1="0" x2="420" y2="60" stroke="#1e293b" stroke-width="4" />
+                        </svg>
+                    </div>
+                </div>
+                <!-- Right Cables -->
+                <div class="crane-cable-group right-cable-group">
+                    <div class="top-cables">
+                        <div class="cable"></div>
+                        <div class="cable"></div>
+                    </div>
+                    <div class="spreader-assembly">
+                        <div class="spreader-block">
+                            <div class="spreader-bolt bolt-1"></div>
+                            <div class="spreader-bolt bolt-2"></div>
+                            <div class="spreader-bolt bolt-3"></div>
+                            <div class="spreader-bolt bolt-4"></div>
+                        </div>
+                        <div class="spreader-hook"></div>
+                    </div>
+                    <div class="angled-ropes">
+                        <svg viewBox="0 0 430 60" preserveAspectRatio="none">
+                            <line x1="215" y1="0" x2="10" y2="60" stroke="#1e293b" stroke-width="4" />
+                            <line x1="215" y1="0" x2="420" y2="60" stroke="#1e293b" stroke-width="4" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hanging Containers Grid -->
+        <div class="hanging-containers-grid">
+            <!-- Left Container: Exporter -->
+            <div class="shipping-container black-container">
+                <div class="container-corner top-left"></div>
+                <div class="container-corner top-right"></div>
+                <div class="container-corner bottom-left"></div>
+                <div class="container-corner bottom-right"></div>
+
+                <div class="container-content-overlay">
+                    <div class="painted-banner">
+                        <h2>ARE YOU AN EXPORTER?</h2>
+                    </div>
+                    <a href="javascript:void(0);" class="btn ask-btn">ASK US <i class="ph ph-arrow-up-right"></i></a>
+                </div>
+            </div>
+
+            <!-- Right Container: Importer -->
+            <div class="shipping-container orange-container">
+                <div class="container-corner top-left"></div>
+                <div class="container-corner top-right"></div>
+                <div class="container-corner bottom-left"></div>
+                <div class="container-corner bottom-right"></div>
+
+                <div class="container-content-overlay">
+                    <div class="chevron-decor">
+                        <i class="ph-bold ph-caret-right"></i><i class="ph-bold ph-caret-right"></i><i
+                            class="ph-bold ph-caret-right"></i><i class="ph-bold ph-caret-right"></i><i
+                            class="ph-bold ph-caret-right"></i>
+                    </div>
+                    <div class="painted-banner">
+                        <h2>ARE YOU AN IMPORTER?</h2>
+                    </div>
+                    <a href="javascript:void(0);" class="btn ask-btn">ASK US <i class="ph ph-arrow-up-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div style="text-align: center; margin-bottom: 85px;">
+            <div class="wcu-badge" style="margin-bottom: 0;">
+                <span class="wcu-badge-line"></span>
+                FREQUENTLY ASKED QUESTIONS
+                <span class="wcu-badge-line"></span>
+            </div>
+        </div>
+        <div class="faq-container">
+            <!-- Top Badge Icon -->
+            <div class="faq-top-badge">
+                <i class="ph ph-question"></i>
+            </div>
+
+            <div class="faq-content">
+                <div class="faq-header">
+                    <h2>Got Questions? <span>We've Got Answers!</span></h2>
+                    <p>Find clear answers to the most common questions about our logistics services.</p>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="ph ph-package"></i>
+                            <h3>What logistics services do you offer?</h3>
+                            <div class="faq-toggle"><i class="ph ph-plus"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We offer a comprehensive range of logistics services including air freight, ocean
+                                freight, road transportation, warehousing, and customs clearance tailored to your
+                                business needs.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="ph ph-truck"></i>
+                            <h3>How long does delivery take?</h3>
+                            <div class="faq-toggle"><i class="ph ph-plus"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Delivery times vary depending on the chosen shipping method and destination. Domestic
+                                road freight usually takes 1-3 days, while international air freight can take 3-5 days.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="ph ph-globe-hemisphere-west"></i>
+                            <h3>Do you provide international shipping?</h3>
+                            <div class="faq-toggle"><i class="ph ph-plus"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, we have a vast global network and provide reliable international shipping to over
+                                150 countries worldwide, managing all complex documentation.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="ph ph-map-pin-line"></i>
+                            <h3>How can I track my shipment?</h3>
+                            <div class="faq-toggle"><i class="ph ph-plus"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You can track your shipment 24/7 using our online tracking portal by simply entering your
+                                unique tracking number provided at booking.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="ph ph-shield-check"></i>
+                            <h3>What if my cargo is delayed or damaged?</h3>
+                            <div class="faq-toggle"><i class="ph ph-plus"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>We provide comprehensive cargo insurance options. In the rare event of damage or delay,
+                                our dedicated support team will assist you immediately with the claims process.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <i class="ph ph-receipt"></i>
+                            <h3>How do I get a quote for my shipment?</h3>
+                            <div class="faq-toggle"><i class="ph ph-plus"></i></div>
+                        </div>
+                        <div class="faq-answer">
+                            <p>You can easily get a custom quote by filling out the 'Request Quote' form on our website
+                                or by directly contacting one of our logistics experts.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-image-side">
+                <img src="images/faq-bg.jpg" alt="Logistics Port" class="faq-bg-img">
+                <div class="faq-contact-card">
+                    <div class="contact-icon">
+                        <i class="ph-fill ph-headset"></i>
+                    </div>
+                    <h3>Still Have Questions?</h3>
+                    <h4>Let's Talk!</h4>
+                    <p>Our logistics experts are ready to help you with the right solution for your business.</p>
+                    <a href="javascript:void(0);" class="btn contact-card-btn">
+                        <i class="ph ph-phone-call"></i> Talk to Our Expert <i class="ph ph-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="testimonials-header">
+            <div class="wcu-badge" style="margin-bottom: 25px;">
+                <span class="wcu-badge-line"></span>
+                TESTIMONIALS
+                <span class="wcu-badge-line"></span>
+            </div>
+            <div class="services-icon-wrapper">
+                <i class="ph-fill ph-chat-circle-text"></i>
+            </div>
+            <p>Real feedback from businesses that trust us with their logistics needs.</p>
+        </div>
+
+        <div class="testimonials-carousel-wrapper">
+            <button class="testi-nav prev"><i class="ph ph-caret-left"></i></button>
+
+            <div class="testimonials-track-container">
+                <div class="testimonials-track">
+                    <!-- Card 1 -->
+                    <div class="testi-card">
+                        <div class="testi-card-header">
+                            <i class="ph-fill ph-quotes"></i>
+                            <div class="testi-stars">
+                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                    class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                    class="ph-fill ph-star"></i>
+                            </div>
+                        </div>
+                        <p class="testi-text">Global Logistics has been a game-changer for our supply chain. Their
+                            on-time delivery and transparency give us the confidence to focus on growing our business.
+                        </p>
+                        <div class="testi-divider"></div>
+                        <div class="testi-profile">
+                            <img src="profile1.jpg" alt="Rohan Mehta">
+                            <div class="testi-info">
+                                <h4>Rohan Mehta</h4>
+                                <span>Supply Chain Manager</span>
+                                <span class="testi-company">Mehta Exports Pvt. Ltd.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="testi-card">
+                        <div class="testi-card-header">
+                            <i class="ph-fill ph-quotes"></i>
+                            <div class="testi-stars">
+                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                    class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                    class="ph-fill ph-star"></i>
+                            </div>
+                        </div>
+                        <p class="testi-text">From customs clearance to final delivery, the team handles everything with
+                            professionalism and care. Their global network and quick support make them our go-to
+                            logistics partner.</p>
+                        <div class="testi-divider"></div>
+                        <div class="testi-profile">
+                            <img src="profile2.jpg" alt="Anjali Sharma">
+                            <div class="testi-info">
+                                <h4>Anjali Sharma</h4>
+                                <span>Director</span>
+                                <span class="testi-company">Sharma Global Imports</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="testi-card">
+                        <div class="testi-card-header">
+                            <i class="ph-fill ph-quotes"></i>
+                            <div class="testi-stars">
+                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                    class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                    class="ph-fill ph-star"></i>
+                            </div>
+                        </div>
+                        <p class="testi-text">Highly reliable and cost-effective services. Global Logistics consistently
+                            delivers beyond expectations. Truly a partner we can count on.</p>
+                        <div class="testi-divider"></div>
+                        <div class="testi-profile">
+                            <img src="profile3.jpg" alt="Michael Johnson">
+                            <div class="testi-info">
+                                <h4>Michael Johnson</h4>
+                                <span>Operations Head</span>
+                                <span class="testi-company">TransWorld Industries</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4 (Duplicate for carousel scrolling) -->
+                    <div class="testi-card">
+                        <div class="testi-card-header">
+                            <i class="ph-fill ph-quotes"></i>
+                            <div class="testi-stars">
+                                <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                    class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                                    class="ph-fill ph-star"></i>
+                            </div>
+                        </div>
+                        <p class="testi-text">Global Logistics has been a game-changer for our supply chain. Their
+                            on-time delivery and transparency give us the confidence to focus on growing our business.
+                        </p>
+                        <div class="testi-divider"></div>
+                        <div class="testi-profile">
+                            <img src="profile1.jpg" alt="Rohan Mehta">
+                            <div class="testi-info">
+                                <h4>Rohan Mehta</h4>
+                                <span>Supply Chain Manager</span>
+                                <span class="testi-company">Mehta Exports Pvt. Ltd.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="testi-nav next"><i class="ph ph-caret-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Global Network Section -->
+    <section class="global-network-section">
+        <div class="global-network-header">
+            <div class="wcu-badge" style="margin-bottom: 25px;">
+                <span class="wcu-badge-line"></span>
+                GLOBAL NETWORK
+                <span class="wcu-badge-line"></span>
+            </div>
+            <div class="services-icon-wrapper">
+                <i class="ph-fill ph-globe-hemisphere-west"></i>
+                <div class="dots-left"></div>
+                <div class="dots-right"></div>
+            </div>
+            <p>Strong global partnerships that connect businesses across continents, seamlessly and reliably.</p>
+        </div>
+
+        <div class="global-network-panel">
+            <!-- Top Content Row: Text + Map -->
+            <div class="gn-top-row">
+                <!-- Left Side: Text Content -->
+                <div class="gn-content">
+                    <h2 class="gn-heading">
+                        One Network.<br>
+                        Multiple Destinations.<br>
+                        <span class="gn-heading-accent">Unlimited Possibilities.</span>
+                    </h2>
+                    <p class="gn-desc">LogiXpress Global Network is developing strong relationships with freight
+                        forwarders, logistics agents, transporters, shipping partners, and service providers across the
+                        world.</p>
+                    <p class="gn-desc">Our network-based approach allows us to provide flexible logistics solutions
+                        across multiple countries and international trade routes.</p>
+                    <p class="gn-desc">We believe that strong partnerships create stronger logistics solutions.</p>
+
+                    <div class="gn-stats">
+                        <div class="gn-stat">
+                            <h3 class="gn-stat-number" data-target="150" data-suffix="+">0+</h3>
+                            <p>Countries Connected</p>
+                            <span class="gn-stat-line"></span>
+                        </div>
+                        <div class="gn-stat">
+                            <h3 class="gn-stat-number" data-target="500" data-suffix="+">0+</h3>
+                            <p>Trusted Partners</p>
+                            <span class="gn-stat-line"></span>
+                        </div>
+                        <div class="gn-stat">
+                            <h3 class="gn-stat-number" data-target="6" data-suffix="">0</h3>
+                            <p>Continents</p>
+                            <span class="gn-stat-line"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Map -->
+                <div class="gn-map-side">
+                    <div class="gn-cursive-tag">Connecting<br>Businesses<br>Worldwide</div>
+                    <div class="gn-map-wrapper">
+                        <img src="images/world_map.png" alt="World Map" class="gn-map-img"
+                            onerror="this.style.display='none'">
+                        <!-- SVG fallback world map outline -->
+                        <svg class="gn-map-svg" viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <pattern id="dots" x="0" y="0" width="6" height="6" patternUnits="userSpaceOnUse">
+                                    <circle cx="2" cy="2" r="1.2" fill="#1d4ed8" opacity="0.5" />
+                                </pattern>
+                            </defs>
+                            <!-- Simplified continent shapes filled with dots -->
+                            <path
+                                d="M120,140 Q180,100 240,120 Q300,110 320,150 Q330,200 280,220 Q220,240 180,230 Q140,220 120,180 Z"
+                                fill="url(#dots)" />
+                            <path
+                                d="M180,250 Q220,260 240,290 Q250,340 210,380 Q180,400 160,370 Q140,330 150,290 Q160,260 180,250 Z"
+                                fill="url(#dots)" />
+                            <path
+                                d="M380,120 Q460,100 520,130 Q580,140 600,180 Q610,230 560,250 Q500,260 460,250 Q400,240 380,200 Q370,160 380,120 Z"
+                                fill="url(#dots)" />
+                            <path
+                                d="M460,270 Q510,280 540,320 Q560,370 520,400 Q480,420 450,400 Q420,370 430,320 Q440,290 460,270 Z"
+                                fill="url(#dots)" />
+                            <path
+                                d="M650,150 Q720,130 780,150 Q830,170 840,210 Q830,260 770,270 Q710,270 670,250 Q640,220 650,180 Z"
+                                fill="url(#dots)" />
+                            <path d="M820,300 Q870,310 900,340 Q910,380 880,400 Q840,410 820,380 Q810,340 820,300 Z"
+                                fill="url(#dots)" />
+                        </svg>
+                        <!-- Connection lines SVG overlay -->
+                        <svg class="gn-connections" viewBox="0 0 1000 500" preserveAspectRatio="none">
+                            <path d="M500,250 Q300,150 200,180" stroke="#1d4ed8" stroke-width="1.5" fill="none"
+                                stroke-dasharray="3,4" opacity="0.5" />
+                            <path d="M500,250 Q400,120 320,150" stroke="#1d4ed8" stroke-width="1.5" fill="none"
+                                stroke-dasharray="3,4" opacity="0.5" />
+                            <path d="M500,250 Q650,120 750,150" stroke="#1d4ed8" stroke-width="1.5" fill="none"
+                                stroke-dasharray="3,4" opacity="0.5" />
+                            <path d="M500,250 Q700,180 800,220" stroke="#1d4ed8" stroke-width="1.5" fill="none"
+                                stroke-dasharray="3,4" opacity="0.5" />
+                            <path d="M500,250 Q450,380 500,400" stroke="#1d4ed8" stroke-width="1.5" fill="none"
+                                stroke-dasharray="3,4" opacity="0.5" />
+                            <path d="M500,250 Q550,380 620,400" stroke="#1d4ed8" stroke-width="1.5" fill="none"
+                                stroke-dasharray="3,4" opacity="0.5" />
+                            <path d="M500,250 Q200,380 250,420" stroke="#1d4ed8" stroke-width="1.5" fill="none"
+                                stroke-dasharray="3,4" opacity="0.5" />
+                            <path d="M500,250 Q830,360 880,400" stroke="#1d4ed8" stroke-width="1.5" fill="none"
+                                stroke-dasharray="3,4" opacity="0.5" />
+                        </svg>
+                        <!-- Center RB logo -->
+                        <div class="gn-center-node">
+                            <div class="gn-center-pulse"></div>
+                            <div class="gn-center-logo">RB</div>
+                        </div>
+                        <!-- Location markers -->
+                        <div class="gn-marker" style="top: 28%; left: 20%;">
+                            <span class="gn-marker-dot"></span>
+                            <span class="gn-marker-label">North America</span>
+                        </div>
+                        <div class="gn-marker" style="top: 18%; left: 47%;">
+                            <span class="gn-marker-dot"></span>
+                            <span class="gn-marker-label">Europe</span>
+                        </div>
+                        <div class="gn-marker" style="top: 24%; left: 75%;">
+                            <span class="gn-marker-dot"></span>
+                            <span class="gn-marker-label">Asia</span>
+                        </div>
+                        <div class="gn-marker" style="top: 68%; left: 32%;">
+                            <span class="gn-marker-dot"></span>
+                            <span class="gn-marker-label">South America</span>
+                        </div>
+                        <div class="gn-marker" style="top: 65%; left: 53%;">
+                            <span class="gn-marker-dot"></span>
+                            <span class="gn-marker-label">Africa</span>
+                        </div>
+                        <div class="gn-marker" style="top: 80%; left: 80%;">
+                            <span class="gn-marker-dot"></span>
+                            <span class="gn-marker-label">Australia</span>
+                        </div>
+                    </div>
+                    <div class="gn-tagline-card">
+                        <div class="gn-tagline-icon"><i class="ph-fill ph-graph"></i></div>
+                        <p><strong>Stronger Partnerships.</strong><br>A More Connected World.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Feature Bar -->
+            <div class="gn-features">
+                <div class="gn-feature">
+                    <div class="gn-feature-icon"><i class="ph-fill ph-globe-hemisphere-west"></i></div>
+                    <div class="gn-feature-text">
+                        <h4>Global Partnerships</h4>
+                        <p>Strong relationships with agents and partners worldwide.</p>
+                    </div>
+                </div>
+                <div class="gn-feature-divider"></div>
+                <div class="gn-feature">
+                    <div class="gn-feature-icon"><i class="ph-fill ph-users-three"></i></div>
+                    <div class="gn-feature-text">
+                        <h4>Wider Reach</h4>
+                        <p>Flexible logistics solutions across multiple countries.</p>
+                    </div>
+                </div>
+                <div class="gn-feature-divider"></div>
+                <div class="gn-feature">
+                    <div class="gn-feature-icon"><i class="ph-bold ph-arrows-left-right"></i></div>
+                    <div class="gn-feature-text">
+                        <h4>Stronger Collaboration</h4>
+                        <p>Working together for better opportunities.</p>
+                    </div>
+                </div>
+                <div class="gn-feature-divider"></div>
+                <div class="gn-feature">
+                    <div class="gn-feature-icon"><i class="ph-fill ph-chart-line-up"></i></div>
+                    <div class="gn-feature-text">
+                        <h4>Greater Possibilities</h4>
+                        <p>Connecting businesses globally for a brighter tomorrow.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <!-- Brand Column -->
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <i class="ph-fill ph-globe-hemisphere-west"></i>
+                    LogiXpress
+                </a>
+                <p>Delivering seamless global logistics solutions that drive your business forward. Speed, reliability,
+                    and transparency in every shipment.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="ph-fill ph-facebook-logo"></i></a>
+                    <a href="#"><i class="ph-fill ph-twitter-logo"></i></a>
+                    <a href="#"><i class="ph-fill ph-linkedin-logo"></i></a>
+                    <a href="#"><i class="ph-fill ph-instagram-logo"></i></a>
+                </div>
+            </div>
+
+            <!-- Quick Links Column -->
+            <div class="footer-widget">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html"><i class="ph-bold ph-caret-right"></i> Home</a></li>
+                    <li><a href="about.html"><i class="ph-bold ph-caret-right"></i> About Us</a></li>
+                    <li><a href="air-freight.html"><i class="ph-bold ph-caret-right"></i> Air Freight</a></li>
+                    <li><a href="#services"><i class="ph-bold ph-caret-right"></i> Services</a></li>
+                    <li><a href="#tracking"><i class="ph-bold ph-caret-right"></i> Tracking</a></li>
+                    <li><a href="#contact"><i class="ph-bold ph-caret-right"></i> Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Services Column -->
+            <div class="footer-widget">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="land-freight.html"><i class="ph-bold ph-caret-right"></i> Road Freight</a></li>
+                    <li><a href="index.html#services"><i class="ph-bold ph-caret-right"></i> Ocean Freight</a></li>
+                    <li><a href="air-freight.html"><i class="ph-bold ph-caret-right"></i> Air Freight</a></li>
+                    <li><a href="#"><i class="ph-bold ph-caret-right"></i> Warehousing</a></li>
+                    <li><a href="#"><i class="ph-bold ph-caret-right"></i> Customs Clearance</a></li>
+                    <li><a href="#"><i class="ph-bold ph-caret-right"></i> Project Cargo</a></li>
+                    <li><a href="#"><i class="ph-bold ph-caret-right"></i> Door-to-Door Logistics</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Column -->
+            <div class="footer-widget">
+                <h4>Contact Us</h4>
+                <div class="footer-contact-info">
+                    <div class="contact-item">
+                        <i class="ph-fill ph-map-pin"></i>
+                        <div class="contact-item-text">
+                            <span>Head Office</span>
+                            <p>123 Logistics Avenue, Global Trade Hub, NY 10001</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="ph-fill ph-phone-call"></i>
+                        <div class="contact-item-text">
+                            <span>Call Us Anytime</span>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="ph-fill ph-envelope-simple"></i>
+                        <div class="contact-item-text">
+                            <span>Email Us</span>
+                            <p>support@logixpress.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 LogiXpress. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

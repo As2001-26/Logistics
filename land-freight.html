@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Land Freight Services | LogiXpress - Reliable Road Transportation</title>
+    <meta name="description"
+        content="From local deliveries to cross-border shipments, LogiXpress land freight solutions keep your cargo moving safely, securely, and on time.">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIk4xpHx6S9H5b5jV5p2Z2qG5b5jV5p2Z2qG5b5jV5p2Z2qG5b5jV5p2Z2qG5b" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Caveat:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="land-freight-page">
+
+    <!-- Fixed Navbar Wrapper -->
+    <div class="site-navbar-wrapper">
+        <div class="container">
+            <!-- Header / Navbar -->
+            <header class="navbar">
+                <!-- Brand Logo -->
+                <a href="index.html" class="logo" style="text-decoration: none;">
+                    <i class="ph-fill ph-cube"></i>
+                    <div class="logo-text">
+                        <span class="brand-name">LogiXpress</span>
+                        <span class="brand-tagline">Delivering Possibilities</span>
+                    </div>
+                </a>
+
+                <!-- Navigation Links -->
+                <nav class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About Us</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link active d-flex align-items-center gap-1">Services <i
+                                class="ph-bold ph-caret-down fs-sm"></i></a>
+                        <div class="mega-menu">
+                            <div class="mega-menu-inner">
+                                <!-- Left Column -->
+                                <div class="mega-col-left">
+                                    <div class="d-flex align-items-center gap-2 mb-3">
+                                        <div class="bg-primary" style="width: 25px; height: 2px;"></div>
+                                        <span class="text-uppercase fw-bold text-muted small letter-spacing-1">Our
+                                            Services</span>
+                                    </div>
+                                    <h3 class="fw-900 text-dark mb-3" style="font-size: 28px; line-height: 1.2;">
+                                        Complete Logistics Solutions for a <span class="text-primary">Connected
+                                            World</span>
+                                    </h3>
+                                    <p class="text-muted small mb-4">From air to sea, road to rail — we deliver
+                                        reliable, efficient and customized logistics solutions tailored to your business
+                                        needs.</p>
+                                    <img src="images/mega_hero.jpg" alt="Global Logistics" class="mega-hero-img">
+                                </div>
+
+                                <!-- Middle Column (Grid) -->
+                                <div class="mega-col-middle">
+                                    <a href="air-freight.html" class="mega-service-card">
+                                        <img src="images/mega_air.jpg" alt="Air Freight">
+                                        <div class="mega-card-content">
+                                            <h4>Air Freight</h4>
+                                            <p>Fast, secure and reliable air cargo solutions.</p>
+                                        </div>
+                                        <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                                    </a>
+                                    <a href="index.html#services" class="mega-service-card">
+                                        <img src="images/mega_sea.jpg" alt="Sea Freight">
+                                        <div class="mega-card-content">
+                                            <h4>Sea Freight</h4>
+                                            <p>Cost-effective ocean freight for international shipping.</p>
+                                        </div>
+                                        <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                                    </a>
+                                    <a href="land-freight.html" class="mega-service-card active">
+                                        <img src="images/mega_road.jpg" alt="Road Freight">
+                                        <div class="mega-card-content">
+                                            <h4>Road & Land Freight</h4>
+                                            <p>Efficient transportation across domestic routes.</p>
+                                        </div>
+                                        <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                                    </a>
+                                    <a href="index.html#services" class="mega-service-card">
+                                        <img src="images/warehousing.jpg" alt="Warehousing & Distribution">
+                                        <div class="mega-card-content">
+                                            <h4>Warehousing & Distribution</h4>
+                                            <p>Secure storage and efficient distribution solutions.</p>
+                                        </div>
+                                        <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                                    </a>
+                                    <a href="index.html#services" class="mega-service-card">
+                                        <img src="images/customs_clearance.jpg" alt="Customs Clearance">
+                                        <div class="mega-card-content">
+                                            <h4>Customs Clearance</h4>
+                                            <p>Hassle-free customs and documentation processes.</p>
+                                        </div>
+                                        <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                                    </a>
+                                    <a href="index.html#services" class="mega-service-card">
+                                        <img src="images/project_cargo.jpg" alt="Project Cargo">
+                                        <div class="mega-card-content">
+                                            <h4>Project Cargo</h4>
+                                            <p>Customized logistics for specialized and complex cargo.</p>
+                                        </div>
+                                        <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                                    </a>
+                                    <a href="index.html#services" class="mega-service-card">
+                                        <img src="images/mega_door.jpg" alt="Door-to-Door Logistics">
+                                        <div class="mega-card-content">
+                                            <h4>Door-to-Door Logistics</h4>
+                                            <p>Complete logistics from pickup to final delivery.</p>
+                                        </div>
+                                        <i class="ph-bold ph-arrow-right mega-card-arrow"></i>
+                                    </a>
+                                </div>
+
+                                <!-- Right Column -->
+                                <div class="mega-col-right">
+                                    <h4 class="right-col-heading"><span class="text-primary">Global
+                                            Logistics</span><br><span class="text-dark">Local Commitment</span></h4>
+                                    <ul class="mega-feature-list">
+                                        <li><i class="ph-fill ph-globe"></i> Global Reach</li>
+                                        <li><i class="ph-fill ph-clock"></i> On-Time Delivery</li>
+                                        <li><i class="ph-fill ph-shield-check"></i> Safe & Secure</li>
+                                        <li><i class="ph-fill ph-headset"></i> Dedicated Support</li>
+                                    </ul>
+                                    <div class="mega-cursive-footer">
+                                        Moving Businesses Further
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="index.html#industries">Industries</a>
+                    <a href="index.html#solutions">Solutions</a>
+                    <a href="index.html#contact">Contact</a>
+                </nav>
+
+                <!-- Nav Action Buttons -->
+                <div class="nav-actions">
+                    <a href="index.html#tracking" class="btn btn-outline">
+                        Track Shipment <i class="ph ph-map-pin"></i>
+                    </a>
+                    <a href="index.html#quote" class="btn btn-primary">
+                        Get a Quote <i class="ph ph-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Hamburger Button (3 lines) -->
+                <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open navigation menu" aria-expanded="false">
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                    <span class="hamburger-bar"></span>
+                </button>
+            </header>
+        </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+    <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile Navigation" aria-hidden="true">
+        <div class="mobile-drawer-header">
+            <a href="index.html" class="logo mobile-drawer-logo">
+                <i class="ph-fill ph-cube"></i>
+                <div class="logo-text">
+                    <span class="brand-name">LogiXpress</span>
+                    <span class="brand-tagline">Delivering Possibilities</span>
+                </div>
+            </a>
+            <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close menu">
+                <i class="ph-bold ph-x"></i>
+            </button>
+        </div>
+
+        <div class="mobile-drawer-body">
+            <nav class="mobile-nav-list">
+                <a href="index.html" class="mobile-nav-link">
+                    <i class="ph-bold ph-house"></i>
+                    <span>Home</span>
+                </a>
+                <a href="about.html" class="mobile-nav-link">
+                    <i class="ph-bold ph-info"></i>
+                    <span>About Us</span>
+                </a>
+
+                <!-- Expandable Services Submenu (Active page is Land Freight) -->
+                <div class="mobile-nav-accordion is-open" id="mobileServicesAccordion">
+                    <button class="mobile-nav-accordion-toggle" aria-expanded="true">
+                        <span class="d-flex align-items-center gap-2">
+                            <i class="ph-bold ph-squares-four text-primary"></i>
+                            <span class="text-primary fw-bold">Services</span>
+                        </span>
+                        <i class="ph-bold ph-caret-down accordion-arrow"></i>
+                    </button>
+                    <div class="mobile-nav-accordion-content">
+                        <a href="air-freight.html" class="mobile-sublink">
+                            <i class="ph-bold ph-airplane-tilt text-primary"></i>
+                            <div class="mobile-sublink-text">
+                                <strong>Air Freight</strong>
+                                <small>Fast & secure air cargo</small>
+                            </div>
+                        </a>
+                        <a href="land-freight.html" class="mobile-sublink active">
+                            <i class="ph-bold ph-truck text-primary"></i>
+                            <div class="mobile-sublink-text">
+                                <strong>Road / Land Freight</strong>
+                                <small>Nationwide ground logistics</small>
+                            </div>
+                        </a>
+                        <a href="index.html#services" class="mobile-sublink">
+                            <i class="ph-bold ph-boat text-primary"></i>
+                            <div class="mobile-sublink-text">
+                                <strong>Sea Freight</strong>
+                                <small>Global ocean shipping</small>
+                            </div>
+                        </a>
+                        <a href="index.html#services" class="mobile-sublink">
+                            <i class="ph-bold ph-warehouse text-primary"></i>
+                            <div class="mobile-sublink-text">
+                                <strong>Warehousing & Distribution</strong>
+                                <small>Secure modern storage</small>
+                            </div>
+                        </a>
+                        <a href="index.html#services" class="mobile-sublink">
+                            <i class="ph-bold ph-file-text text-primary"></i>
+                            <div class="mobile-sublink-text">
+                                <strong>Customs Clearance</strong>
+                                <small>Hassle-free documentation</small>
+                            </div>
+                        </a>
+                        <a href="index.html#services" class="mobile-sublink">
+                            <i class="ph-bold ph-package text-primary"></i>
+                            <div class="mobile-sublink-text">
+                                <strong>Project Cargo</strong>
+                                <small>Specialized complex shipping</small>
+                            </div>
+                        </a>
+                        <a href="index.html#services" class="mobile-sublink">
+                            <i class="ph-bold ph-map-pin text-primary"></i>
+                            <div class="mobile-sublink-text">
+                                <strong>Door-to-Door Logistics</strong>
+                                <small>Complete end-to-end delivery</small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="index.html#industries" class="mobile-nav-link">
+                    <i class="ph-bold ph-buildings"></i>
+                    <span>Industries</span>
+                </a>
+                <a href="index.html#solutions" class="mobile-nav-link">
+                    <i class="ph-bold ph-chart-polar"></i>
+                    <span>Solutions</span>
+                </a>
+                <a href="index.html#contact" class="mobile-nav-link">
+                    <i class="ph-bold ph-envelope-simple"></i>
+                    <span>Contact</span>
+                </a>
+            </nav>
+
+            <div class="mobile-drawer-cta">
+                <a href="index.html#tracking" class="btn btn-outline">
+                    <i class="ph ph-map-pin"></i> Track Shipment
+                </a>
+                <a href="index.html#quote" class="btn btn-primary">
+                    <i class="ph ph-arrow-right"></i> Get a Quote
+                </a>
+            </div>
+
+            <div class="mobile-drawer-footer">
+                <div class="mobile-footer-contact">
+                    <div class="contact-item">
+                        <i class="ph-fill ph-phone-call text-primary"></i>
+                        <span>+1 (800) 555-0199</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="ph-fill ph-envelope text-primary"></i>
+                        <span>support@logixpress.com</span>
+                    </div>
+                </div>
+                <p class="mobile-footer-tagline">Moving Businesses Further • Worldwide</p>
+            </div>
+        </div>
+    </aside>
+
+    <main class="land-freight-main" style="padding-top: 95px;">
+        <!-- =========================================
+             SECTION 1: HERO SECTION
+             ========================================= -->
+        <section class="lf-hero-section">
+            <div class="container">
+                <div class="lf-hero-grid">
+                    <!-- Left: Content -->
+                    <div class="lf-hero-left">
+                        <div class="af-eyebrow-wrap">
+                            <span class="af-eyebrow">MOVING BUSINESSES FORWARD</span>
+                            <span class="af-eyebrow-line"></span>
+                        </div>
+
+                        <h1 class="lf-hero-title">
+                            Land <span class="lf-title-accent">Freight</span>
+                        </h1>
+
+                        <h2 class="lf-hero-tagline">
+                            Reliable. Flexible. On the Move.
+                        </h2>
+
+                        <p class="lf-hero-desc">
+                            From local deliveries to cross-border shipments, our land freight solutions keep your cargo
+                            moving safely, securely, and on time.
+                        </p>
+
+                        <!-- Key Feature Badges Row -->
+                        <div class="lf-hero-badges">
+                            <div class="lf-badge-item">
+                                <i class="ph-bold ph-shield-check"></i>
+                                <span>Safe<br>Transportation</span>
+                            </div>
+                            <div class="lf-badge-divider"></div>
+                            <div class="lf-badge-item">
+                                <i class="ph-bold ph-clock"></i>
+                                <span>On-Time<br>Delivery</span>
+                            </div>
+                            <div class="lf-badge-divider"></div>
+                            <div class="lf-badge-item">
+                                <i class="ph-bold ph-map-pin-line"></i>
+                                <span>Wide<br>Coverage</span>
+                            </div>
+                        </div>
+
+                        <!-- CTA Button -->
+                        <div class="lf-hero-actions">
+                            <a href="index.html#quote" class="lf-btn-primary">
+                                Get a Quote <i class="ph-bold ph-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Hero Visual -->
+                    <div class="lf-hero-right">
+                        <div class="lf-hero-visual-card">
+                            <img src="images/land_hero_truck.jpg" alt="Commercial Semi-Trailer Freight Truck on Highway"
+                                class="lf-hero-truck-img">
+                            
+                            <!-- Slogan Overlay Badge on Truck -->
+                            <div class="lf-truck-slogan-badge">
+                                <span>DRIVEN BY TRUST</span>
+                                <span>DELIVERING POSSIBILITIES</span>
+                            </div>
+
+                            <!-- Handwritten Script Accents -->
+                            <div class="lf-hero-cursive-note">
+                                Routes that build<br>a better tomorrow
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             SECTION 2: OUR LAND FREIGHT SERVICES (4-CARD GRID)
+             ========================================= -->
+        <section class="lf-solutions-section">
+            <div class="container">
+                <!-- Section Header Row -->
+                <div class="lf-solutions-header">
+                    <div class="lf-solutions-header-left">
+                        <div class="af-eyebrow-wrap">
+                            <span class="af-eyebrow">SOLUTIONS FOR EVERY MILE</span>
+                            <span class="af-eyebrow-line"></span>
+                        </div>
+                        <h2 class="lf-main-heading">
+                            Our <span class="lf-heading-accent">Land Freight</span> Services
+                        </h2>
+                    </div>
+                    <div class="lf-solutions-header-right">
+                        <p class="lf-header-desc">
+                            Whether it's a single shipment or a full truckload, we provide customized road freight
+                            solutions to meet your business needs.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 4 Service Cards Grid -->
+                <div class="lf-services-grid">
+                    <!-- Card 1: FTL -->
+                    <div class="lf-service-card">
+                        <div class="lf-card-icon-wrap">
+                            <i class="ph-bold ph-truck"></i>
+                        </div>
+                        <h3 class="lf-card-title">Full Truck Load (FTL)</h3>
+                        <p class="lf-card-desc">Dedicated trucks for large shipments with faster transit times.</p>
+                        <a href="index.html#quote" class="lf-card-arrow-btn" aria-label="Learn about Full Truck Load">
+                            <i class="ph-bold ph-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Card 2: LTL -->
+                    <div class="lf-service-card">
+                        <div class="lf-card-icon-wrap">
+                            <i class="ph-bold ph-package"></i>
+                        </div>
+                        <h3 class="lf-card-title">Less Than Truck Load (LTL)</h3>
+                        <p class="lf-card-desc">Cost-effective shipping for smaller loads.</p>
+                        <a href="index.html#quote" class="lf-card-arrow-btn" aria-label="Learn about Less Than Truck Load">
+                            <i class="ph-bold ph-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Card 3: Special Cargo -->
+                    <div class="lf-service-card">
+                        <div class="lf-card-icon-wrap">
+                            <i class="ph-bold ph-cube"></i>
+                        </div>
+                        <h3 class="lf-card-title">Special Cargo</h3>
+                        <p class="lf-card-desc">Safe handling for over-dimensional, heavy, and sensitive goods.</p>
+                        <a href="index.html#quote" class="lf-card-arrow-btn" aria-label="Learn about Special Cargo">
+                            <i class="ph-bold ph-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <!-- Card 4: Domestic & Cross-Border -->
+                    <div class="lf-service-card">
+                        <div class="lf-card-icon-wrap">
+                            <i class="ph-bold ph-map-pin"></i>
+                        </div>
+                        <h3 class="lf-card-title">Domestic & Cross-Border</h3>
+                        <p class="lf-card-desc">Seamless transportation across cities, states, and international borders.</p>
+                        <a href="index.html#quote" class="lf-card-arrow-btn"
+                            aria-label="Learn about Domestic and Cross-Border Transportation">
+                            <i class="ph-bold ph-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             SECTION 3: CONNECTING DESTINATIONS (HIGHWAY & MAP NETWORK)
+             ========================================= -->
+        <section class="lf-destinations-section">
+            <div class="container-fluid p-0 position-relative">
+                <div class="lf-dest-grid">
+                    <!-- Left: Strategic Network & Live Animated Counters -->
+                    <div class="lf-dest-left">
+                        <div class="af-eyebrow-wrap">
+                            <span class="af-eyebrow" style="color: #93c5fd;">A STRONGER SUPPLY CHAIN</span>
+                            <span class="af-eyebrow-line" style="background: #38bdf8;"></span>
+                        </div>
+
+                        <h2 class="lf-dest-title">
+                            Connecting<br>
+                            <span class="lf-dest-title-accent">Destinations</span>
+                        </h2>
+
+                        <p class="lf-dest-desc">
+                            Our extensive road network ensures your cargo reaches every destination with reliability and
+                            speed.
+                        </p>
+
+                        <!-- Stats Row with Scroll Counter Animation -->
+                        <div class="lf-dest-stats">
+                            <div class="lf-stat-item">
+                                <span class="lf-stat-num" data-target="1000" data-suffix="+">0+</span>
+                                <span class="lf-stat-label">Routes Covered</span>
+                            </div>
+                            <div class="lf-stat-divider"></div>
+                            <div class="lf-stat-item">
+                                <span class="lf-stat-num" data-target="99" data-suffix="%">0%</span>
+                                <span class="lf-stat-label">On-Time Delivery</span>
+                            </div>
+                            <div class="lf-stat-divider"></div>
+                            <div class="lf-stat-item">
+                                <span class="lf-stat-num" data-target="24" data-suffix="/7">0/7</span>
+                                <span class="lf-stat-label">Shipment Tracking</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Map Corridor & Coastal Highway Truck Visual -->
+                    <div class="lf-dest-visual">
+                        <div class="lf-dest-img-container">
+                            <img src="images/land_highway_map.jpg" alt="Coastal Highway Road Freight Transportation"
+                                class="lf-dest-highway-img">
+                            <div class="lf-dest-gradient-blend"></div>
+                        </div>
+
+                        <!-- Vector Road Corridor Map Simulation Overlay -->
+                        <svg class="lf-dest-route-svg" viewBox="0 0 700 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Continents Silhouette Graphic in Background -->
+                            <path
+                                d="M 40,80 Q 90,60 140,85 T 220,110 T 320,80 T 420,95 T 520,70 L 580,90 L 560,180 L 480,240 L 420,290 L 320,330 L 220,280 L 140,250 L 60,190 Z"
+                                fill="rgba(37, 99, 235, 0.18)" />
+
+                            <!-- Dotted Road Highway Connection Lines (Animated Dash) -->
+                            <path d="M 120,120 C 180,90 260,140 340,170 S 480,180 560,250" stroke="#ffffff"
+                                stroke-width="2.2" stroke-dasharray="5 6" class="lf-road-dash-path" />
+                            <path d="M 340,170 C 400,220 450,290 540,320" stroke="#ffffff" stroke-width="1.8"
+                                stroke-dasharray="4 5" opacity="0.85" class="lf-road-dash-path" />
+
+                            <!-- Pinpoint Map Hubs -->
+                            <g class="lf-pin-hub" transform="translate(120, 120)">
+                                <circle cx="0" cy="0" r="10" fill="#38bdf8" opacity="0.3" />
+                                <circle cx="0" cy="0" r="4" fill="#ffffff" />
+                                <path d="M 0,-14 C 3,-14 6,-11 6,-7 C 6,0 0,8 0,8 C 0,8 -6,0 -6,-7 C -6,-11 -3,-14 0,-14 Z"
+                                    fill="#ffffff" />
+                                <circle cx="0" cy="-7" r="2" fill="#1d4ed8" />
+                            </g>
+
+                            <g class="lf-pin-hub" transform="translate(340, 170)">
+                                <circle cx="0" cy="0" r="12" fill="#38bdf8" opacity="0.4" />
+                                <circle cx="0" cy="0" r="4.5" fill="#ffffff" />
+                                <path d="M 0,-16 C 4,-16 7,-12 7,-8 C 7,1 0,10 0,10 C 0,10 -7,1 -7,-8 C -7,-12 -4,-16 0,-16 Z"
+                                    fill="#ffffff" />
+                                <circle cx="0" cy="-8" r="2.5" fill="#1d4ed8" />
+                            </g>
+
+                            <g class="lf-pin-hub" transform="translate(560, 250)">
+                                <circle cx="0" cy="0" r="12" fill="#38bdf8" opacity="0.4" />
+                                <circle cx="0" cy="0" r="4.5" fill="#ffffff" />
+                                <path d="M 0,-16 C 4,-16 7,-12 7,-8 C 7,1 0,10 0,10 C 0,10 -7,1 -7,-8 C -7,-12 -4,-16 0,-16 Z"
+                                    fill="#ffffff" />
+                                <circle cx="0" cy="-8" r="2.5" fill="#1d4ed8" />
+                            </g>
+
+                            <g class="lf-pin-hub" transform="translate(540, 320)">
+                                <circle cx="0" cy="0" r="10" fill="#38bdf8" opacity="0.3" />
+                                <circle cx="0" cy="0" r="4" fill="#ffffff" />
+                                <path d="M 0,-14 C 3,-14 6,-11 6,-7 C 6,0 0,8 0,8 C 0,8 -6,0 -6,-7 C -6,-11 -3,-14 0,-14 Z"
+                                    fill="#ffffff" />
+                                <circle cx="0" cy="-7" r="2" fill="#1d4ed8" />
+                            </g>
+                        </svg>
+
+                        <!-- Floating Glass Slogan Card -->
+                        <div class="lf-dest-glass-tag">
+                            <div class="lf-tag-vertical-bar"></div>
+                            <div class="lf-tag-text-wrap">
+                                <span class="lf-tag-line">ACROSS CITIES.</span>
+                                <span class="lf-tag-line">ACROSS BORDERS.</span>
+                                <span class="lf-tag-line">ALWAYS AHEAD.</span>
+                                <div class="lf-tag-bottom-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =========================================
+             SECTION 4: WHY CHOOSE US (BUILT FOR YOUR BUSINESS)
+             ========================================= -->
+        <section class="lf-why-choose-section">
+            <div class="container">
+                <div class="lf-why-card-wrapper">
+                    <div class="lf-why-header">
+                        <div class="af-eyebrow-wrap">
+                            <span class="af-eyebrow">WHY CHOOSE US</span>
+                            <span class="af-eyebrow-line"></span>
+                        </div>
+                        <h2 class="lf-why-title">
+                            Built for <span class="text-primary">Your Business</span>
+                        </h2>
+                    </div>
+
+                    <!-- 4 Pillars + 1 Right Accent Column -->
+                    <div class="lf-why-grid">
+                        <!-- Pillar 1: Customized Solutions -->
+                        <div class="lf-why-item">
+                            <div class="lf-why-icon-wrap">
+                                <i class="ph-bold ph-gear"></i>
+                            </div>
+                            <h3 class="lf-why-item-title">Customized Solutions</h3>
+                            <p class="lf-why-item-desc">Tailored to your cargo and schedule.</p>
+                        </div>
+
+                        <!-- Pillar 2: Experienced Team -->
+                        <div class="lf-why-item">
+                            <div class="lf-why-icon-wrap">
+                                <i class="ph-bold ph-users-three"></i>
+                            </div>
+                            <h3 class="lf-why-item-title">Experienced Team</h3>
+                            <p class="lf-why-item-desc">Logistics experts you can rely on.</p>
+                        </div>
+
+                        <!-- Pillar 3: Safety First -->
+                        <div class="lf-why-item">
+                            <div class="lf-why-icon-wrap">
+                                <i class="ph-bold ph-shield-check"></i>
+                            </div>
+                            <h3 class="lf-why-item-title">Safety First</h3>
+                            <p class="lf-why-item-desc">Your cargo is in safe hands.</p>
+                        </div>
+
+                        <!-- Pillar 4: Sustainable Transport -->
+                        <div class="lf-why-item">
+                            <div class="lf-why-icon-wrap">
+                                <i class="ph-bold ph-leaf"></i>
+                            </div>
+                            <h3 class="lf-why-item-title">Sustainable Transport</h3>
+                            <p class="lf-why-item-desc">Efficient routes for a greener tomorrow.</p>
+                        </div>
+
+                        <!-- Right Accent Column -->
+                        <div class="lf-why-right-col">
+                            <div class="lf-why-right-inner">
+                                <span class="lf-why-accent-text">MORE THAN TRANSPORT</span>
+                                <span class="lf-why-accent-title">A STRONGER TOMORROW</span>
+                                <div class="lf-why-accent-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Column 1: Brand & Bio -->
+                <div class="footer-col brand-col">
+                    <div class="logo footer-logo">
+                        <i class="ph-fill ph-cube"></i>
+                        <div class="logo-text">
+                            <span class="brand-name text-white">LogiXpress</span>
+                            <span class="brand-tagline">Delivering Possibilities</span>
+                        </div>
+                    </div>
+                    <p class="footer-bio">
+                        Transforming supply chains globally with precision air freight, ocean logistics, and integrated
+                        end-to-end transport systems.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn"><i class="ph-fill ph-linkedin-logo"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="ph-fill ph-x-logo"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="ph-fill ph-facebook-logo"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="ph-fill ph-instagram-logo"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="air-freight.html">Air Freight</a></li>
+                        <li><a href="land-freight.html">Land & Road Freight</a></li>
+                        <li><a href="index.html#solutions">Customs & Logistics</a></li>
+                        <li><a href="index.html#contact">Contact Support</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Global Services -->
+                <div class="footer-col">
+                    <h4 class="footer-heading">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="air-freight.html">Express Air Cargo</a></li>
+                        <li><a href="land-freight.html">Full Truck Load (FTL)</a></li>
+                        <li><a href="land-freight.html">Less Than Truck Load (LTL)</a></li>
+                        <li><a href="index.html#services">Ocean Container Freight</a></li>
+                        <li><a href="index.html#services">Warehousing & Storage</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact Information -->
+                <div class="footer-col contact-col">
+                    <h4 class="footer-heading">Get in Touch</h4>
+                    <div class="contact-item">
+                        <i class="ph-fill ph-map-pin"></i>
+                        <div class="contact-item-text">
+                            <span>Global HQ</span>
+                            <p>100 Logistics Blvd, Suite 400, Chicago, IL</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="ph-fill ph-phone-call"></i>
+                        <div class="contact-item-text">
+                            <span>Call Us Anytime</span>
+                            <p>+1 (555) 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="ph-fill ph-envelope-simple"></i>
+                        <div class="contact-item-text">
+                            <span>Email Us</span>
+                            <p>support@logixpress.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 LogiXpress. All rights reserved.</p>
+            <div class="footer-legal">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Cookie Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 180" width="100%" height="auto" class="af-brand-title-svg">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&amp;display=swap');
+      .af-svg-navy { font-family: 'Montserrat', 'Inter', -apple-system, sans-serif; font-weight: 900; fill: #0b2546; }
+      .af-svg-blue { font-family: 'Montserrat', 'Inter', -apple-system, sans-serif; font-weight: 900; fill: #1d70f5; }
+    </style>
+    <!-- Swoosh Gradient -->
+    <linearGradient id="swooshGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#60a5fa" />
+    </linearGradient>
+  </defs>
+
+  <!-- Group for AIR FREIGHT Typography -->
+  <g transform="translate(10, 15)">
+    <!-- Custom Letter 'A' with airplane & orbiting swoosh -->
+    <g transform="translate(0, 0)">
+      <!-- Outer/Inner 'A' Dark Navy Path -->
+      <path d="M 52,10 L 92,104 L 64,104 L 56,83 L 26,83 L 18,104 L -8,104 L 32,10 Z M 41,44 L 32,67 L 50,67 Z" fill="#0b2546" />
+      
+      <!-- Blue Swoosh Arc that wraps from bottom-left through the A crossbar -->
+      <path d="M -22,76 C -32,56 -12,34 20,24 C 44,17 68,22 82,34 C 74,38 60,34 42,38 C 22,43 5,55 2,72 C -1,86 16,88 32,82 C 16,86 -14,92 -22,76 Z" fill="url(#swooshGrad)" />
+
+      <!-- White Airplane Silhouette Flying upward-right along the swoosh -->
+      <g transform="translate(36, 52) rotate(-32) scale(0.95)">
+        <!-- Airplane Fuselage & Wings -->
+        <path d="M 0,-18 C 1.5,-18 3,-12 3.5,-4 L 18,4 C 19,4.5 19,6 17.5,6.5 L 4,5.5 L 3.5,14 L 8,18 C 8.5,18.5 8.5,19.5 7.5,19.8 L 0,18.5 L -7.5,19.8 C -8.5,19.5 -8.5,18.5 -8,18 L -3.5,14 L -4,5.5 L -17.5,6.5 C -19,6 -19,4.5 -18,4 L -3.5,-4 C -3,-12 -1.5,-18 0,-18 Z" fill="#ffffff" />
+      </g>
+    </g>
+
+    <!-- 'IR' in Dark Navy -->
+    <text x="108" y="104" font-size="108" class="af-svg-navy" letter-spacing="1">IR</text>
+
+    <!-- 'FREIGHT' in Vibrant Blue -->
+    <text x="272" y="104" font-size="108" class="af-svg-blue" letter-spacing="2">FREIGHT</text>
+  </g>
+
+  <!-- Sub Divider Bar with Isometric Speed Box -->
+  <g transform="translate(10, 148)">
+    <!-- Left Line -->
+    <line x1="10" y1="12" x2="380" y2="12" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
+    
+    <!-- Center Box Icon & Speed Lines -->
+    <g transform="translate(398, -2)">
+      <!-- 3 Speed Motion Dash Lines -->
+      <line x1="0" y1="9" x2="10" y2="9" stroke="#1d70f5" stroke-width="2.5" stroke-linecap="round" />
+      <line x1="4" y1="14" x2="11" y2="14" stroke="#1d70f5" stroke-width="2.5" stroke-linecap="round" />
+      <line x1="0" y1="19" x2="9" y2="19" stroke="#1d70f5" stroke-width="2.5" stroke-linecap="round" />
+
+      <!-- Isometric 3D Delivery Box -->
+      <g transform="translate(20, -1)">
+        <!-- Outer Box Hexagon -->
+        <path d="M 16,1 L 31,9.5 L 31,26.5 L 16,35 L 1,26.5 L 1,9.5 Z" stroke="#1d70f5" stroke-width="2.8" stroke-linejoin="round" fill="#ffffff" />
+        <!-- Inner Box Y Split (Top, Left, Right faces) -->
+        <path d="M 16,1 L 16,18 M 1,9.5 L 16,18 L 31,9.5 M 16,18 L 16,35" stroke="#1d70f5" stroke-width="2.8" stroke-linejoin="round" />
+      </g>
+    </g>
+
+    <!-- Right Line -->
+    <line x1="472" y1="12" x2="880" y2="12" stroke="#93c5fd" stroke-width="2" stroke-linecap="round" />
+  </g>
+</svg>
