@@ -128,62 +128,145 @@ document.addEventListener('DOMContentLoaded', () => {
     const testiPrev = document.querySelector('.testi-nav.prev');
     const testiNext = document.querySelector('.testi-nav.next');
     const testiDots = document.querySelectorAll('.testimonials-pagination .dot');
+    const testiMobilePrev = document.querySelector('.testi-mobile-btn.prev');
+    const testiMobileNext = document.querySelector('.testi-mobile-btn.next');
+    const testiMobileDots = document.querySelectorAll('.testi-mobile-dots .dot');
     
     if (testiTrack && testiCards.length > 0) {
         let currentIndex = 0;
-        // Total cards minus the visible cards (assume 3 cards visible on desktop, 1 on mobile)
-        const getVisibleCards = () => window.innerWidth <= 640 ? 1 : window.innerWidth <= 968 ? 2 : 3;
+        
+        const isMobile = () => window.innerWidth <= 768;
+        const getTotalMobileCards = () => 3;
         
         const updateCarousel = () => {
-            const cardWidth = testiCards[0].offsetWidth;
-            const gap = 30; // gap from CSS
-            const moveAmount = (cardWidth + gap) * currentIndex;
-            testiTrack.style.transform = `translateX(-${moveAmount}px)`;
-            
-            // Update dots
-            testiDots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentIndex);
-            });
+            if (isMobile()) {
+                const cardWidth = testiCards[0].offsetWidth;
+                const gap = 20; // 20px gap on mobile
+                const moveAmount = (cardWidth + gap) * currentIndex;
+                testiTrack.style.transform = `translateX(-${moveAmount}px)`;
+                
+                // Update mobile dots
+                testiMobileDots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex);
+                });
+            } else {
+                const cardWidth = testiCards[0].offsetWidth;
+                const gap = 30; // gap from desktop CSS
+                const moveAmount = (cardWidth + gap) * currentIndex;
+                testiTrack.style.transform = `translateX(-${moveAmount}px)`;
+                
+                // Update desktop dots
+                testiDots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentIndex);
+                });
+            }
         };
 
-        if (testiNext) {
-            testiNext.addEventListener('click', () => {
-                const maxIndex = testiCards.length - getVisibleCards();
+        const goNext = () => {
+            if (isMobile()) {
+                const max = getTotalMobileCards() - 1;
+                if (currentIndex < max) {
+                    currentIndex++;
+                } else {
+                    currentIndex = 0;
+                }
+            } else {
+                const visible = window.innerWidth <= 968 ? 2 : 3;
+                const maxIndex = Math.max(0, testiCards.length - visible);
                 if (currentIndex < maxIndex) {
                     currentIndex++;
                 } else {
-                    currentIndex = 0; // Loop back
+                    currentIndex = 0;
                 }
-                updateCarousel();
-            });
-        }
+            }
+            updateCarousel();
+        };
 
-        if (testiPrev) {
-            testiPrev.addEventListener('click', () => {
+        const goPrev = () => {
+            if (isMobile()) {
+                const max = getTotalMobileCards() - 1;
                 if (currentIndex > 0) {
                     currentIndex--;
                 } else {
-                    currentIndex = testiCards.length - getVisibleCards(); // Loop to end
+                    currentIndex = max;
                 }
-                updateCarousel();
-            });
-        }
-        
-        testiDots.forEach((dot, index) => {
+            } else {
+                const visible = window.innerWidth <= 968 ? 2 : 3;
+                const maxIndex = Math.max(0, testiCards.length - visible);
+                if (currentIndex > 0) {
+                    currentIndex--;
+                } else {
+                    currentIndex = maxIndex;
+                }
+            }
+            updateCarousel();
+        };
+
+        if (testiNext) testiNext.addEventListener('click', goNext);
+        if (testiPrev) testiPrev.addEventListener('click', goPrev);
+        if (testiMobileNext) testiMobileNext.addEventListener('click', goNext);
+        if (testiMobilePrev) testiMobilePrev.addEventListener('click', goPrev);
+
+        testiMobileDots.forEach((dot, index) => {
             dot.addEventListener('click', () => {
-                const maxIndex = testiCards.length - getVisibleCards();
-                if (index <= maxIndex) {
-                    currentIndex = index;
-                    updateCarousel();
-                }
+                currentIndex = index;
+                updateCarousel();
             });
         });
 
+        testiDots.forEach((dot, index) => {
+            dot.addEventListener('click', () => {
+                currentIndex = index;
+                updateCarousel();
+            });
+        });
+
+        // Touch Swipe Support for Mobile
+        const trackContainer = document.querySelector('.testimonials-track-container');
+        if (trackContainer) {
+            let startX = 0;
+            let currentX = 0;
+            let isSwiping = false;
+
+            trackContainer.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+                currentX = startX;
+                isSwiping = true;
+            }, { passive: true });
+
+            trackContainer.addEventListener('touchmove', (e) => {
+                if (!isSwiping) return;
+                currentX = e.touches[0].clientX;
+            }, { passive: true });
+
+            trackContainer.addEventListener('touchend', () => {
+                if (!isSwiping) return;
+                const diff = startX - currentX;
+                if (Math.abs(diff) > 40) {
+                    if (diff > 0) {
+                        goNext();
+                    } else {
+                        goPrev();
+                    }
+                }
+                isSwiping = false;
+                startX = 0;
+                currentX = 0;
+            });
+        }
+
         // Handle resize
         window.addEventListener('resize', () => {
-            const maxIndex = testiCards.length - getVisibleCards();
-            if (currentIndex > maxIndex) {
-                currentIndex = Math.max(0, maxIndex);
+            if (isMobile()) {
+                if (currentIndex >= getTotalMobileCards()) {
+                    currentIndex = 0;
+                }
+            } else {
+                const visible = window.innerWidth <= 968 ? 2 : 3;
+                const maxIndex = Math.max(0, testiCards.length - visible);
+                if (currentIndex > maxIndex) {
+                    currentIndex = maxIndex;
+                }
             }
             updateCarousel();
         });
@@ -194,58 +277,101 @@ document.addEventListener('DOMContentLoaded', () => {
     const serviceCards = document.querySelectorAll('#services-track .service-card');
     const servicesPrev = document.getElementById('services-prev');
     const servicesNext = document.getElementById('services-next');
+    const servicesMPrev = document.getElementById('services-m-prev');
+    const servicesMNext = document.getElementById('services-m-next');
+    const servicesDots = document.querySelectorAll('#services-dots .dot');
 
     if (servicesTrack && serviceCards.length > 0) {
         let currentServiceIndex = 0;
         
+        const isMobileView = () => window.innerWidth <= 768;
+
         const getVisibleServiceCards = () => {
-            if (window.innerWidth <= 640) return 1;
+            if (window.innerWidth <= 768) return 4;
             if (window.innerWidth <= 968) return 2;
             if (window.innerWidth <= 1200) return 3;
             return 4;
         };
 
         const updateServicesSlider = () => {
-            const cardWidth = serviceCards[0].offsetWidth;
-            const gap = 30; // gap from CSS
-            const moveAmount = (cardWidth + gap) * currentServiceIndex;
-            servicesTrack.style.transform = `translateX(-${moveAmount}px)`;
+            const isMob = isMobileView();
+            const maxIndex = Math.max(0, serviceCards.length - getVisibleServiceCards());
             
-            // Update button states
-            const maxIndex = serviceCards.length - getVisibleServiceCards();
-            if (servicesPrev) servicesPrev.disabled = currentServiceIndex === 0;
-            if (servicesNext) servicesNext.disabled = currentServiceIndex >= maxIndex;
+            if (currentServiceIndex > maxIndex) {
+                currentServiceIndex = maxIndex;
+            }
+
+            if (isMob) {
+                const cardHeight = serviceCards[0].offsetHeight || 124;
+                const gap = 10; // gap from mobile CSS
+                const moveAmount = (cardHeight + gap) * currentServiceIndex;
+                servicesTrack.style.transform = `translateY(-${moveAmount}px)`;
+
+                // Update mobile dots
+                servicesDots.forEach((dot, idx) => {
+                    dot.classList.toggle('active', idx === currentServiceIndex);
+                });
+
+                // Update mobile buttons
+                if (servicesMPrev) {
+                    servicesMPrev.style.opacity = currentServiceIndex === 0 ? '0.5' : '1';
+                    servicesMPrev.style.pointerEvents = currentServiceIndex === 0 ? 'none' : 'auto';
+                }
+                if (servicesMNext) {
+                    servicesMNext.style.opacity = currentServiceIndex >= maxIndex ? '0.5' : '1';
+                    servicesMNext.style.pointerEvents = currentServiceIndex >= maxIndex ? 'none' : 'auto';
+                }
+            } else {
+                const cardWidth = serviceCards[0].offsetWidth;
+                const gap = 30; // gap from desktop CSS
+                const moveAmount = (cardWidth + gap) * currentServiceIndex;
+                servicesTrack.style.transform = `translateX(-${moveAmount}px)`;
+                
+                // Update desktop buttons
+                if (servicesPrev) servicesPrev.disabled = currentServiceIndex === 0;
+                if (servicesNext) servicesNext.disabled = currentServiceIndex >= maxIndex;
+            }
         };
 
-        if (servicesNext) {
-            servicesNext.addEventListener('click', () => {
-                const maxIndex = serviceCards.length - getVisibleServiceCards();
-                if (currentServiceIndex < maxIndex) {
-                    currentServiceIndex++;
-                    updateServicesSlider();
-                }
-            });
-        }
+        const handleNext = () => {
+            const maxIndex = Math.max(0, serviceCards.length - getVisibleServiceCards());
+            if (currentServiceIndex < maxIndex) {
+                currentServiceIndex++;
+            } else {
+                currentServiceIndex = 0;
+            }
+            updateServicesSlider();
+        };
 
-        if (servicesPrev) {
-            servicesPrev.addEventListener('click', () => {
-                if (currentServiceIndex > 0) {
-                    currentServiceIndex--;
+        const handlePrev = () => {
+            const maxIndex = Math.max(0, serviceCards.length - getVisibleServiceCards());
+            if (currentServiceIndex > 0) {
+                currentServiceIndex--;
+            } else {
+                currentServiceIndex = maxIndex;
+            }
+            updateServicesSlider();
+        };
+
+        if (servicesNext) servicesNext.addEventListener('click', handleNext);
+        if (servicesPrev) servicesPrev.addEventListener('click', handlePrev);
+        if (servicesMNext) servicesMNext.addEventListener('click', handleNext);
+        if (servicesMPrev) servicesMPrev.addEventListener('click', handlePrev);
+
+        servicesDots.forEach((dot) => {
+            dot.addEventListener('click', () => {
+                const idx = parseInt(dot.getAttribute('data-index'), 10);
+                if (!isNaN(idx)) {
+                    currentServiceIndex = idx;
                     updateServicesSlider();
                 }
             });
-        }
+        });
 
         window.addEventListener('resize', () => {
-            const maxIndex = serviceCards.length - getVisibleServiceCards();
-            if (currentServiceIndex > maxIndex) {
-                currentServiceIndex = Math.max(0, maxIndex);
-            }
             updateServicesSlider();
         });
         
-        // Initial setup
-        // Small delay to ensure CSS is applied
         setTimeout(updateServicesSlider, 50);
     }
 
