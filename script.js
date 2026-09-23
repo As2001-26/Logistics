@@ -400,25 +400,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const gnPanel = document.querySelector('.global-network-panel');
     if (gnPanel) {
         gnPanel.style.opacity = '0';
-        gnPanel.style.transform = 'translateY(40px)';
-        gnPanel.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-        const gnObserver = new IntersectionObserver((entries) => {
+        gnPanel.style.transform = 'translateY(30px)';
+        gnPanel.style.transition = 'opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+        const gnObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
-                } else {
-                    entry.target.style.opacity = '0';
-                    entry.target.style.transform = 'translateY(40px)';
+                    observer.unobserve(entry.target); // Stay fixed and do not shift when scrolling down to footer
                 }
             });
-        }, { threshold: 0.2 });
+        }, { threshold: 0.15 });
         gnObserver.observe(gnPanel);
     }
 
     // --- Number Animation for Global Network Stats ---
     const gnStatNumbers = document.querySelectorAll('.gn-stat-number');
     if (gnStatNumbers.length > 0) {
+        let statsAnimated = false;
         const animateGnNumbers = () => {
             gnStatNumbers.forEach(stat => {
                 const target = parseFloat(stat.getAttribute('data-target'));
@@ -450,18 +449,15 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         };
 
-        const gnStatsObserver = new IntersectionObserver((entries) => {
+        const gnStatsObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
-                if (entry.isIntersecting) {
+                if (entry.isIntersecting && !statsAnimated) {
+                    statsAnimated = true;
                     animateGnNumbers();
-                } else {
-                    gnStatNumbers.forEach(stat => {
-                        const suffix = stat.getAttribute('data-suffix') || '';
-                        stat.innerText = '0' + suffix;
-                    });
+                    observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.3 });
+        }, { threshold: 0.2 });
 
         const gnStats = document.querySelector('.gn-stats');
         if (gnStats) {
